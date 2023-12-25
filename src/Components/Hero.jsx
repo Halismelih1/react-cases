@@ -1,12 +1,11 @@
-import { useGetProductsQuery } from '../Redux/api';
-import Card from './Card';
+
 
 
 
 const Hero = () => {
 
     return(
-        <Card/>
+       <h1 className="underline">selam</h1>
     )
     
 }
