@@ -1,31 +1,42 @@
-// Header.js
 
 import React from 'react';
-import { FaSearch, FaEllipsisV } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+
 
 
 const Header = () => {
 
+  //ADD
   const handleAddProduct = () => {
+    const title = prompt('Ürün Başlığı:');
+    const price = prompt('Ürün Fiyatı:');
+  
     fetch('https://dummyjson.com/products/add', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        title: 'BMW Pencil',
-        /* diğer bilgileri burda girebilriz */
+        title: title,
+        price: price,
       })
     })
       .then(res => res.json())
-      .then(console.log);
+      .then(data => {
+        console.log('Ürün Başarıyla Eklendi:', data);
+      });
   };
 
+  //DELETE
   const handleDeleteProduct = () => {
-    fetch('https://dummyjson.com/products/1', {
+    const productId = prompt('Silmek istediğiniz ürünün ID\'sini girin:');
+  
+    fetch(`https://dummyjson.com/products/${productId}`, {
       method: 'DELETE',
     })
       .then(res => res.json())
-      .then(console.log);
+      .then(data => {
+        console.log('Ürün Başarıyla Silindi:', data);
+      });
   };
 
 
