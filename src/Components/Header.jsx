@@ -1,11 +1,20 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
 const Header = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const navigate = useNavigate();
+
+  //SEARCH
+  const handleSearch = () => {
+    navigate(`/search?q=${searchQuery}`);
+  };
+
 
   //ADD
   const handleAddProduct = () => {
@@ -50,9 +59,14 @@ const Header = () => {
           <input
             type="text"
             placeholder="Search"
-            className="py-1 px-2 rounded border-2 border-gray-600"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="py-1 px-2 rounded border-2 border-gray-600 text-black"
           />
-          <FaSearch className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500" />
+          <FaSearch
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 cursor-pointer"
+            onClick={handleSearch}
+          />
         </div>
       </div>
       <div className="flex items-center mt-4 md:mt-0">

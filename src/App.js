@@ -5,6 +5,7 @@ import Header from './Components/Header';
 import Detail from './Pages/Detail';
 import { Routes ,Route } from 'react-router-dom';
 import Footer from './Components/Footer';
+import SearchResults from './Pages/SearchResults';
 
 
 
@@ -32,6 +33,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Hero data={data}/>}/>
       <Route path="/detail/:productId" element={<Detail data={data}/>} />
+      <Route path="/search" element={<SearchResults data={data} />} />
     </Routes>
     <Footer />
 
