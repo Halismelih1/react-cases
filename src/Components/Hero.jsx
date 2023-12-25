@@ -1,14 +1,17 @@
+import Card from "./Card";
 
 
+const Hero = ({data}) => {
+    const products = data.products || [];
 
-
-const Hero = () => {
-
-    return(
-       <h1 className="underline">selam</h1>
-    )
-    
-}
+    return (
+        <div className="container mx-auto flex flex-wrap">
+        {products.map((product) => (
+          <Card key={product.id} product={product} />
+        ))}
+      </div>
+    );
+    };
 
 export default Hero;
 
