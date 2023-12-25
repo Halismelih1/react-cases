@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react';
 import  Hero  from './Components/Hero';
 import axios from 'axios';
+import Header from './Components/Header';
+import Detail from './Pages/Detail';
+import { Routes ,Route } from 'react-router-dom';
+import Footer from './Components/Footer';
+
 
 
 function App() {
@@ -11,7 +16,6 @@ function App() {
     axios.get("https://dummyjson.com/products")
       .then(response => {
         setData(response.data);
-        console.log(response.data); 
       })
       .catch(error => console.log(error));
   }, []);
@@ -21,10 +25,15 @@ function App() {
 
   return (
 
-     <div>
-      <h1 className="text-4xl font-bold mb-4">Ürünler</h1>
-      <Hero data={data} />
-    </div>
+    <div>
+    <Header />
+    <Routes>
+      <Route path="/" element={<Hero data={data}/>}/>
+      <Route path="/detail/:productId" element={<Detail data={data}/>} />
+    </Routes>
+    <Footer />
+
+  </div>
 
   );
 };
