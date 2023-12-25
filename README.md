@@ -1,3 +1,12 @@
+## Screen
+![hero](https://github.com/Halismelih1/react-cases/assets/125564176/db83707f-8468-4600-868b-34d995906e4f)
+![detail](https://github.com/Halismelih1/react-cases/assets/125564176/f6530f9b-4d9a-4520-9685-b7188ce75cdd)
+![3](https://github.com/Halismelih1/react-cases/assets/125564176/0c0c67df-afae-457d-957a-10653abc910a)
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
