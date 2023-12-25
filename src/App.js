@@ -12,6 +12,8 @@ function App() {
   const [data,setData] = useState([]);
   const [loading,setLoading] = useState(false);
 
+  
+
   useEffect(() => {
     axios.get("https://dummyjson.com/products")
       .then(response => {

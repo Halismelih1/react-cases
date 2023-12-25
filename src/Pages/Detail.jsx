@@ -5,17 +5,16 @@ import { FaStar, FaShoppingCart, FaArrowLeft } from 'react-icons/fa';
 
 
 const Detail = ({ data }) => {
-  console.log(data);
-
   const { productId } = useParams();
-  const product = data.products.find(item => String(item.id) === productId);
 
-  if (!product) {
+  if (!data || !data.products) {
     return <div>Ürün bulunamadı</div>;
   }
 
-  const { title, description, price, rating, stock, images, brand, category } = product;
+  const product = data.products.find(item => String(item.id) === productId);
 
+
+  const { title, description, price, rating, stock, images, brand, category } = product;
   return (
     <div className="container mx-auto my-8">
       <div className="flex items-center mb-4">
