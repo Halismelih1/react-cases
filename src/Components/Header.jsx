@@ -30,11 +30,11 @@ const Header = () => {
 
 
   return (
-    <header className="bg-gray-800 text-white p-4 flex justify-between items-center">
-      <div className="flex items-center">
-        <Link to="/" className="text-2xl font-bold mr-4">2B2 E-Commerce</Link>
+    <header className="bg-gray-800 text-white p-4 flex flex-col md:flex-row justify-between items-center">
+      <div className="flex items-center mb-4 md:mb-0">
+        <Link to="/" className="text-2xl font-bold">2B2 E-Commerce</Link>
       </div>
-      <div className="flex items-center justify-end">
+      <div className="flex items-center justify-end w-full md:w-auto">
         <div className="relative">
           <input
             type="text"
@@ -44,12 +44,13 @@ const Header = () => {
           <FaSearch className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500" />
         </div>
       </div>
-      <div className="flex items-center">
-      <Link to="#" onClick={handleAddProduct} className="text-green-500 cursor-pointer">Ürün Ekleme</Link>
-        <Link to="#" onClick={handleDeleteProduct} className="ml-4 text-red-500 cursor-pointer">Ürün Silme</Link>
+      <div className="flex items-center mt-4 md:mt-0">
+        <Link to="#" onClick={handleAddProduct} className="text-green-500 cursor-pointer mr-4 md:mr-2">Ürün Ekleme</Link>
+        <Link to="#" onClick={handleDeleteProduct} className="text-red-500 cursor-pointer">Ürün Silme</Link>
       </div>
     </header>
   );
 };
 
 export default Header;
+
