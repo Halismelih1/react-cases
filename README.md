@@ -1,6 +1,6 @@
 ## Screen
 ![hero](https://github.com/Halismelih1/react-cases/assets/125564176/db83707f-8468-4600-868b-34d995906e4f)
-![detail](https://github.com/Halismelih1/react-cases/assets/125564176/f6530f9b-4d9a-4520-9685-b7188ce75cdd)
+![det](https://github.com/Halismelih1/react-cases/assets/125564176/046a8afd-2ab8-4868-9978-8f4760da280d)
 ![3](https://github.com/Halismelih1/react-cases/assets/125564176/0c0c67df-afae-457d-957a-10653abc910a)
 
 
