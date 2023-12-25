@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Card from './Card';
+import Card from '../Components/Card';
 
 const Hero = ({ data }) => {
   const [products, setProducts] = useState([]);
