@@ -1,8 +1,13 @@
-# React + Vite
+# 2B2 E-Commerce Workshop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje React ile oluşturulmuş olup; Redux, Formik(Yup) ve Tailwind gibi teknolojiler ile geliştirilmiştir; Api'dan alınan veriler, Redux ile yönetilerek responsive ilkesine bağlı kalınarak listelenmiştir.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Screen GIF
+![chrome-capture-2023-12-29](https://github.com/Halismelih1/react-cases/assets/125564176/5cf40332-46e2-4433-8ed8-b38753c3f57e)
+
+# Screenshot
+![1](https://github.com/Halismelih1/react-cases/assets/125564176/710fb4ee-5c81-4bbc-a7fa-aa39bcf0f35a)
+![2](https://github.com/Halismelih1/react-cases/assets/125564176/552a35df-6a1f-4e12-9f12-ae20594cfb2d)
+
+
