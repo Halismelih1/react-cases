@@ -1,12 +1,13 @@
 import React from 'react';
-import NavbarLeft from './navbarİtems/NavbarLeft';
-import NavbarRight from './navbarİtems/NavbarRight';
+import NavbarRight from './navbarItems/NavbarRight';
+import NavbarLeft from './navbarItems/NavbarLeft';
+
 
 const Navbar = () => {
   return (
     <nav className='flex flex-wrap md:flex-nowrap items-center justify-between p-4 '>
-      <NavbarLeft />
-      <NavbarRight />
+      <NavbarLeft/>
+      <NavbarRight/>
     </nav>
   );
 }

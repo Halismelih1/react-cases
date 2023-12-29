@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Detail from "./pages/Detail";
 import Cart from "./pages/Cart";
-import Footer from "./components/home/footer/Footer";
+import Footer from "./components/footer/Footer";
 function App() {
   
 

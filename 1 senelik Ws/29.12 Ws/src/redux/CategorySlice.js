@@ -4,7 +4,6 @@ import { STATUS } from "../utils/Status";
 
 const initialState = {
   categories: [],
-  categoriesStatus: STATUS.IDLE,
 
 };
 
@@ -22,17 +21,8 @@ const categorySlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
 
-    builder.addCase(getCategories.pending, (state, action) => {
-        categoriesStatus = STATUS.LOADİNG
-    })
-
     builder.addCase(getCategories.fulfilled, (state, action) => {
         state.categories = action.payload;
-        categoriesStatus = STATUS.SUCCESS
-      })
-
-    builder.addCase(getCategories.rejected, (state, action) => {
-        categoriesStatus = STATUS.FAİL
       })
   },
 });
