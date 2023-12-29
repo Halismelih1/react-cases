@@ -10,7 +10,7 @@ const ProductMap = ({ product }) => {
         <img className="w-48 mx-auto mb-4 cursor-pointer" src={product?.image} alt="" />
         <h3 className="text-lg font-bold text-gray-800">{product?.title}</h3>
       </div>
-      <div className="mt-4 text-green-600 font-bold">
+      <div className="mt-4 text-green-400 font-bold">
         Price: ${product?.price}
       </div>
     </div>

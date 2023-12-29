@@ -17,7 +17,8 @@ const SliderComp = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        
     };
 
     const handleDetailClick = () => {
@@ -27,10 +28,10 @@ const SliderComp = () => {
       };
 
   return (
-    <div>
-       <h1 className="text-center text-4xl font-bold mb-4 my-16">Product of the <span className=' text-yellow-500'> WEEK </span>!</h1>
-      <Slider {...settings}>
-        <div className='!flex items-center bg-gray-200 px-6 '>
+    <div className="">
+       <h1 className="text-center text-4xl font-bold mb-4 my-16 ">Product of the <span className=' text-yellow-500'> WEEK </span>!</h1>
+      <Slider className='z-[-10]' {...settings}>
+        <div className='!flex items-center bg-gray-200 px-6  '>
         <div className='p-8'>
 <div className='text-6xl font-bold'>See More</div>
 <div className='text-lg my-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptate nemo expedita quisquam at repellendus dolor in aut, sed mollitia vitae reprehenderit cum recusandae harum ad provident id possimus necessitatibus?</div>

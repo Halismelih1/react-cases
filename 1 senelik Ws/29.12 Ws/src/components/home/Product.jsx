@@ -20,28 +20,22 @@ const Product = ({category,sort}) => {
   },[dispatch,category])
   return (
     <div className="p-8">
-      {
-        productsStatus == "LOADİNG" ?<Loading/> :
-        
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-  {products
-    ?.slice()
-    .sort((a, b) =>
-      sort === "inc" ? a.price - b.price : sort === "dec" ? b.price - a.price : 0
-    )
-    .map((product, i) => (
-      <ProductMap key={i} product={product} />
-
-
-
-          )
-
-          )}
+      {productsStatus === 'LOADING' ? (
+        <Loading />
+      ) : (
+        <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          {products
+            ?.slice()
+            .sort((a, b) =>
+              sort === 'inc' ? a.price - b.price : sort === 'dec' ? b.price - a.price : 0
+            )
+            .map((product, i) => (
+              <ProductMap key={i} product={product} />
+            ))}
         </div>
-      
-      }
+      )}
     </div>
-  )
-}
+  );
+};
 
 export default Product
