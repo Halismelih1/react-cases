@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className='flex flex-wrap md:flex-nowrap items-center justify-between p-4 '>
       <NavbarLeft />
-      {isLogin ? <NavbarRight /> : <NavbarLogin setIsLogin={setIsLogin} />}
+      {isLogin ? <NavbarRight setIsLogin={setIsLogin} /> : <NavbarLogin setIsLogin={setIsLogin} />}
     </nav>
   );
 }

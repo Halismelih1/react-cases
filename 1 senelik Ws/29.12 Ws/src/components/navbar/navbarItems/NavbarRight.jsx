@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getCartTotal } from '../../../redux/CartSlice';
 import { useNavigate } from 'react-router-dom';
 import { FaPlusCircle } from 'react-icons/fa';
-import { CgLogIn } from "react-icons/cg";
+import { CgLogOut  } from "react-icons/cg";
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
@@ -14,7 +14,7 @@ const ProductFormSchema = Yup.object().shape({
   quantity: Yup.number().required('Quantity is required').positive('Quantity must be positive'),
 });
 
-const NavbarRight = () => {
+const NavbarRight = ({setIsLogin}) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { itemCount } = useSelector((state) => state.carts);
@@ -61,6 +61,10 @@ const NavbarRight = () => {
     console.log('Adding product:', values);
     resetForm();
     closeModal();
+  };
+
+  const handleLogoutClick = () => {
+    setIsLogin(false);
   };
 
   return (
@@ -179,12 +183,18 @@ const NavbarRight = () => {
       <div className='relative'>
         <div
           onClick={() => navigate('cart')}
-          className='absolute -top-3 -right-3 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center cursor-pointer'
+          className='mr-4 absolute -top-3 -right-3 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center cursor-pointer'
         >
           {itemCount}
         </div>
-        <SlBasket className='cursor-pointer' size={26} />
+        <SlBasket className='cursor-pointer mr-4' size={26} />
+        
       </div>
+      <div onClick={handleLogoutClick} className='flex border p-2 justify-center items-center cursor-pointer'>
+  <span className='font-bold text-red-500'>Sign Out</span>
+  <CgLogOut size={26} /> 
+</div>
+
     </div>
   );
 };
