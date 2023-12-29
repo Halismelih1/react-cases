@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getCartTotal } from '../../../redux/CartSlice';
 import { useNavigate } from 'react-router-dom';
 import { FaPlusCircle } from 'react-icons/fa';
+import { CgLogIn } from "react-icons/cg";
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
