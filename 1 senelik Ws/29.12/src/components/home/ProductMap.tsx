@@ -1,11 +1,17 @@
-import React from 'react'
+// ProductMap.tsx
+import React from 'react';
+import Product from '../../utils/Types';
 
-type Props = {}
+type ProductMapProps = {
+  product: Product;
+};
 
-const ProductMap = (props: Props) => {
+const ProductMap: React.FC<ProductMapProps> = ({ product }) => {
   return (
-    <div>ProductMap</div>
-  )
-}
+    <div>
+      <p>{product.title}</p>
+    </div>
+  );
+};
 
-export default ProductMap
+export default ProductMap;

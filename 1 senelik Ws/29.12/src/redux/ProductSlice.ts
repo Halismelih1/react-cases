@@ -22,7 +22,7 @@ const initialState = {
   
   export const getCategoryProduct = createAsyncThunk(
     "getCategory",
-    async (category) => {
+    async (category:String) => {
       const response = await fetch(
         `https://fakestoreapi.com/products/category/${category}`
       );
@@ -60,14 +60,14 @@ const initialState = {
         })
   
         .addCase(getCategoryProduct.pending, (state, action) => {
-          state.productsDetailStatus = "LOADING";
+          state.productsStatus = "LOADING";  
         })
         .addCase(getCategoryProduct.fulfilled, (state, action) => {
-          state.productsDetailStatus = "SUCCESS";
+          state.productsStatus = "SUCCESS"; 
           state.products = action.payload;
         })
         .addCase(getCategoryProduct.rejected, (state, action) => {
-          state.productsDetailStatus = "FAIL";
+          state.productsStatus = "FAIL";  
         });
     },
   });
