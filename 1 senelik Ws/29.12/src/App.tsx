@@ -1,10 +1,29 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import PageContainer from "./containers/PageContainer";
+import Navbar from "./components/navbar/Navbar";
+import Home from "./pages/Home";
+import Cart from "./pages/Cart";
+import Detail from "./pages/Detail";
+import Footer from "./components/footer/Footer";
 
 
-function App() {
+const App : React.FC = () => {
     return (
-        <div className='text-center underline'>
-            <h1>selam</h1>
-        </div>
+        <div>
+        <PageContainer>
+        <Router>
+        <Navbar/>
+        <hr />
+        <Routes>
+          <Route path="/" element={<Home/>}  />
+          <Route path="/products/:id" element={<Detail/>}  />
+          <Route path="/cart" element={<Cart/>}  />
+        </Routes>
+        <Footer/>
+      </Router>
+        </PageContainer>
+      
+      </div>
     );
 }
 
